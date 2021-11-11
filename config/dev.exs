@@ -16,7 +16,8 @@ config :use_local_font, UseLocalFontWeb.Endpoint,
   secret_key_base: "PHFxITpvThYOAA9lYDkD8tT7rAQKc7/SEce7+MT4cKAXGMRU7VRvZmOmed80NRMv",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild:
+      {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch --loader:.ttf=file)]}
   ]
 
 # ## SSL Support

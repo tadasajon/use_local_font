@@ -58,7 +58,7 @@ defmodule UseLocalFont.MixProject do
   defp aliases do
     [
       setup: ["deps.get"],
-      "assets.deploy": ["esbuild default --minify", "phx.digest"]
+      "assets.deploy": ["esbuild default --minify --loader:.ttf=file", "phx.digest"]
     ]
   end
 end
